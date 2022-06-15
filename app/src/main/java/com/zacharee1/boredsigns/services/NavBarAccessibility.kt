@@ -98,3 +98,7 @@ class NavBarAccessibility : AccessibilityService() {
         } catch (e: Exception) {}
     }
 }
+
+private fun SearchManager.launchAssist(nothing: Nothing?) {
+
+}

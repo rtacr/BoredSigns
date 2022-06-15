@@ -7,15 +7,15 @@ import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Build
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.preference.PreferenceManager
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.helper.ItemTouchHelper
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,7 +23,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import com.zacharee1.boredsigns.R
 import com.zacharee1.boredsigns.widgets.NavBarWidget
-import android.support.v7.widget.helper.ItemTouchHelper.Callback.makeFlag
+import androidx.recyclerview.widget.ItemTouchHelper.Callback.makeFlag
 import android.text.TextUtils
 import android.view.DragEvent
 import android.widget.Button
@@ -43,7 +43,7 @@ class NavBarConfigureActivity : AppCompatActivity() {
         setContentView(R.layout.activity_nav_bar_configure)
 
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
-        val buttonsOrder = prefs.getString(NavBarWidget.BUTTONS_ORDER, NavBarWidget.DEFAULT_ORDER).split("|")
+        val buttonsOrder = prefs.getString(NavBarWidget.BUTTONS_ORDER, NavBarWidget.DEFAULT_ORDER)!!.split("|")
 
         updateNavBarPreview(buttonsOrder)
 

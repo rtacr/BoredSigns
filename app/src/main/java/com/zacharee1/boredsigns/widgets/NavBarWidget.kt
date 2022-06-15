@@ -33,7 +33,7 @@ class NavBarWidget : AppWidgetProvider() {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
 
         val buttonsOrder = prefs.getString(BUTTONS_ORDER, DEFAULT_ORDER)
-        val buttonsList = buttonsOrder.split("|")
+        val buttonsList = buttonsOrder!!.split("|")
 
         val views = RemoteViews(context.packageName, R.layout.navbar_widget)
 

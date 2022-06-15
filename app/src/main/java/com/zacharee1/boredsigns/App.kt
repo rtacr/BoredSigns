@@ -5,6 +5,8 @@ import android.content.Intent
 import com.google.firebase.messaging.FirebaseMessaging
 import com.zacharee1.boredsigns.activities.NotSupportedActivity
 import com.zacharee1.boredsigns.util.Utils
+import kotlin.reflect.full.superclasses
+import kotlin.reflect.jvm.jvmName
 
 
 class App : Application() {
@@ -15,7 +17,6 @@ class App : Application() {
     /**
      * THIS NEEDS TO BE REMOVED FOR THE APP TO BUILD
      */
-    private lateinit var licenseManager: LicenseManager
 
     override fun onCreate() {
         super.onCreate()
@@ -26,7 +27,5 @@ class App : Application() {
         }
         FirebaseMessaging.getInstance().subscribeToTopic(NEWS)
 
-        licenseManager = LicenseManager(this)
-        licenseManager.checkPiracy()
     }
 }

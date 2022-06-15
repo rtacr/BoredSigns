@@ -10,10 +10,10 @@ import android.os.Bundle
 import android.preference.PreferenceManager
 import android.service.notification.NotificationListenerService
 import android.service.notification.StatusBarNotification
-import android.support.v4.app.NotificationCompat
 import android.telephony.PhoneStateListener
 import android.telephony.SignalStrength
 import android.telephony.TelephonyManager
+import androidx.core.app.NotificationCompat
 import com.zacharee1.boredsigns.R
 import com.zacharee1.boredsigns.util.Utils
 import com.zacharee1.boredsigns.widgets.InfoWidget

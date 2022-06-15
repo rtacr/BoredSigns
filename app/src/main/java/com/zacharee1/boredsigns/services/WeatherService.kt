@@ -1,7 +1,6 @@
 package com.zacharee1.boredsigns.services
 
 import android.Manifest
-import android.annotation.RequiresPermission
 import android.annotation.SuppressLint
 import android.app.*
 import android.content.*
@@ -14,13 +13,13 @@ import android.os.Bundle
 import android.os.IBinder
 import android.os.SystemClock
 import android.preference.PreferenceManager
-import android.support.v4.app.NotificationCompat
-import android.support.v4.content.LocalBroadcastManager
 import android.widget.Toast
+import androidx.annotation.RequiresPermission
+import androidx.core.app.NotificationCompat
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.location.*
 import com.google.firebase.analytics.FirebaseAnalytics
-import com.zacharee1.boredsigns.LicenseManager
 import com.zacharee1.boredsigns.R
 import com.zacharee1.boredsigns.util.Utils
 import com.zacharee1.boredsigns.widgets.WeatherForecastWidget
@@ -49,7 +48,7 @@ import kotlin.collections.ArrayList
 class WeatherService : Service() {
     companion object {
         const val ACTION_UPDATE_WEATHER = "com.zacharee1.boredsigns.action.UPDATE_WEATHER"
-        const val API_KEY = LicenseManager.API_KEY //IMPORTANT: Use your own OWM API key here when building for yourself!
+        const val API_KEY = "" //IMPORTANT: Use your own OWM API key here when building for yourself!
 
         const val EXTRA_TEMP = "temp"
         const val EXTRA_TEMP_EX = "temp_ex"
@@ -119,15 +118,19 @@ class WeatherService : Service() {
                 else -> LocationManager.PASSIVE_PROVIDER
             }
             locMan.requestSingleUpdate(provider, object : android.location.LocationListener {
-                override fun onLocationChanged(p0: Location?) {
+                override fun onLocationChanged(p0: Location) {
+                    TODO("Not yet implemented")
+                }
+
+                override fun onLocationChanged(locations: MutableList<Location>) {
                     onHandleIntent(ACTION_UPDATE_WEATHER)
                 }
 
-                override fun onProviderDisabled(p0: String?) {
+                override fun onProviderDisabled(provider: String) {
 
                 }
 
-                override fun onProviderEnabled(p0: String?) {
+                override fun onProviderEnabled(provider: String) {
 
                 }
 

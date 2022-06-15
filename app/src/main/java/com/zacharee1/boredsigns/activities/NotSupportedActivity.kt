@@ -1,7 +1,7 @@
 package com.zacharee1.boredsigns.activities
 
 import android.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.zacharee1.boredsigns.R
 

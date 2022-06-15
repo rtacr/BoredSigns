@@ -5,8 +5,8 @@ import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
 import android.content.Intent
-import android.support.v4.content.ContextCompat
 import android.widget.RemoteViews
+import androidx.core.content.ContextCompat
 import com.zacharee1.boredsigns.R
 import com.zacharee1.boredsigns.services.Dev1Service
 

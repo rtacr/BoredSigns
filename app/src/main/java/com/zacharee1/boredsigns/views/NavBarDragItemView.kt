@@ -1,7 +1,7 @@
 package com.zacharee1.boredsigns.views
 
 import android.content.Context
-import android.support.constraint.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 import android.util.AttributeSet
 
 class NavBarDragItemView : ConstraintLayout {

@@ -5,7 +5,7 @@ import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProviderInfo
 import android.content.*
 import android.net.Uri
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.SparseArray
 import android.view.LayoutInflater
@@ -194,7 +194,9 @@ class AODActivity : AppCompatActivity() {
         } else {
             info.position = getMaxOrder()
             if (info.id == -1 && !parseCurrentWidgets().contains(info)) {
-                info.id = ContentUris.parseId(signBoardContext.contentResolver.insert(queryUri, info.toContentValues())).toInt()
+                info.id =
+                    signBoardContext.contentResolver.insert(queryUri, info.toContentValues())
+                        ?.let { ContentUris.parseId(it).toInt() }!!
             }
         }
     }

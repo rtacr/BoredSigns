@@ -23,13 +23,13 @@
         android:required="false" />
 
     <application
-        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_boredsigns"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -104,7 +104,8 @@
 
         <receiver
             android:name=".widgets.InfoWidget"
-            android:label="@string/info_widget_title">
+            android:label="@string/info_widget_title"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="com.zacharee1.boredsigns.action.UPDATE_INFO" />
@@ -120,7 +121,8 @@
         </receiver>
         <receiver
             android:name=".widgets.ImageWidget"
-            android:label="@string/image_widget_title">
+            android:label="@string/image_widget_title"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="com.zacharee1.boredsigns.action.UPDATE_INFO" />
@@ -135,7 +137,8 @@
         </receiver>
         <receiver
             android:name=".widgets.WeatherWidget"
-            android:label="@string/weather_widget_title">
+            android:label="@string/weather_widget_title"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -149,7 +152,8 @@
         </receiver>
         <receiver
             android:name=".widgets.WeatherForecastWidget"
-            android:label="@string/weather_forecast_widget_title">
+            android:label="@string/weather_forecast_widget_title"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -163,7 +167,8 @@
         </receiver>
         <receiver
             android:name=".widgets.NavBarWidget"
-            android:label="@string/navbar_widget_title">
+            android:label="@string/navbar_widget_title"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -177,7 +182,8 @@
         </receiver>
         <receiver
             android:name=".widgets.Dev1Widget"
-            android:label="@string/dev_widget_1_title">
+            android:label="@string/dev_widget_1_title"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -191,7 +197,8 @@
         </receiver>
         <receiver
             android:name=".widgets.Dev2Widget"
-            android:label="@string/dev_widget_2_title">
+            android:label="@string/dev_widget_2_title"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -205,7 +212,8 @@
         </receiver>
         <receiver
             android:name=".widgets.CPUInfoWidget"
-            android:label="@string/cpu_widget_title">
+            android:label="@string/cpu_widget_title"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -219,7 +227,8 @@
         </receiver>
         <receiver
             android:name=".widgets.RingerVolumeWidget"
-            android:label="@string/ringer_widget_title">
+            android:label="@string/ringer_widget_title"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -230,7 +239,8 @@
         </receiver>
         <receiver
             android:name=".widgets.MediaVolumeWidget"
-            android:label="@string/media_widget_title">
+            android:label="@string/media_widget_title"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -275,16 +285,17 @@
         <service
             android:name=".services.Dev1Service"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="false" />
         <service
             android:name=".services.Dev2Service"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="false" />
         <service
             android:name=".services.CPUInfoService"
             android:enabled="true"
-            android:exported="true" />
-        <service android:name=".services.FirebaseService">
+            android:exported="false" />
+        <service android:name=".services.FirebaseService"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -306,7 +317,7 @@
         <service
             android:name=".services.VolumeService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="false" />
     </application>
 
 </manifest>

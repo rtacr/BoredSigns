@@ -5,7 +5,7 @@ import android.appwidget.AppWidgetManager
 import android.content.ComponentName
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 
 class PermissionsActivity : AppCompatActivity() {
     companion object {
@@ -54,11 +54,11 @@ class PermissionsActivity : AppCompatActivity() {
     private fun updateAll() {
         try {
             val man = AppWidgetManager.getInstance(this)
-            val ids = man.getAppWidgetIds(ComponentName(this, klass))
+            val ids = man.getAppWidgetIds(ComponentName(this, klass!!))
             val updateIntent = Intent()
             updateIntent.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
             updateIntent.putExtra("appWidgetIds", ids)
-            updateIntent.component = ComponentName(this, klass)
+            updateIntent.component = ComponentName(this, klass!!)
             sendBroadcast(updateIntent)
         } catch (e: Exception) {}
     }

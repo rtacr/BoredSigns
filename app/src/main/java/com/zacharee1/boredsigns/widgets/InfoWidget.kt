@@ -25,11 +25,12 @@ import android.preference.PreferenceManager
 import android.provider.Settings
 import android.service.notification.NotificationListenerService
 import android.service.notification.StatusBarNotification
-import android.support.v4.app.NotificationManagerCompat
 import android.telephony.*
 import android.view.View
 import android.widget.RemoteViews
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.app.NotificationManagerCompat
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.zacharee1.boredsigns.R
 import com.zacharee1.boredsigns.activities.PermissionsActivity
@@ -141,8 +142,8 @@ class InfoWidget : AppWidgetProvider() {
 
     private fun updateBattery(views: RemoteViews, context: Context) {
         val intent = context.registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
-        val plugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1)
-        val level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0)
+        val plugged = intent!!.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1)
+        val level = intent!!.getIntExtra(BatteryManager.EXTRA_LEVEL, 0)
         val charging = plugged == BatteryManager.BATTERY_PLUGGED_AC || plugged == BatteryManager.BATTERY_PLUGGED_USB || plugged == BatteryManager.BATTERY_PLUGGED_WIRELESS
 
         var show = true
@@ -349,7 +350,7 @@ class InfoWidget : AppWidgetProvider() {
                 bitmap = Bitmap.createBitmap(it.intrinsicWidth, it.intrinsicHeight, Bitmap.Config.ARGB_8888)
             }
 
-            val canvas = Canvas(bitmap)
+            val canvas = Canvas(bitmap!!)
             it.bounds = Rect(0, 0, canvas.width, canvas.height)
             it.draw(canvas)
         }
@@ -360,6 +361,20 @@ class InfoWidget : AppWidgetProvider() {
     private fun getNetworkTypeString(context: Context): String {
         val telMan = context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
 
+        if (ActivityCompat.checkSelfPermission(
+                context,
+                Manifest.permission.READ_PHONE_STATE
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return "ee";
+        }
         when (telMan.networkType) {
             TelephonyManager.NETWORK_TYPE_1xRTT -> return "1x"
             TelephonyManager.NETWORK_TYPE_CDMA -> return "IS95"

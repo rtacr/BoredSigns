@@ -8,9 +8,9 @@ import android.content.Context
 import android.content.Intent
 import android.media.AudioManager
 import android.provider.Settings
-import android.support.v4.content.ContextCompat
 import android.widget.RemoteViews
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.zacharee1.boredsigns.R
 import com.zacharee1.boredsigns.services.VolumeService
 

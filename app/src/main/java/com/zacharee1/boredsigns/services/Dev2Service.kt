@@ -7,7 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.*
-import android.support.v4.app.NotificationCompat
+import androidx.core.app.NotificationCompat
 import com.zacharee1.boredsigns.R
 import com.zacharee1.boredsigns.util.Utils
 import com.zacharee1.boredsigns.widgets.Dev2Widget
@@ -59,7 +59,7 @@ class Dev2Service : Service() {
     private fun startListening() {
         CPU = getCpuTemp()
         GPU = getGpuTemp()
-        BATT = registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED)).getIntExtra(BatteryManager.EXTRA_TEMPERATURE, 60).toFloat() / 10
+        BATT = registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))!!.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, 60).toFloat() / 10
 
         Utils.sendWidgetUpdate(this, Dev2Widget::class.java, null)
 

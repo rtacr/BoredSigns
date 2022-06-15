@@ -9,9 +9,9 @@ import android.content.Intent
 import android.os.BatteryManager
 import android.os.Build
 import android.os.IBinder
-import android.support.v4.app.NotificationCompat
 import android.view.Choreographer
 import android.view.WindowManager
+import androidx.core.app.NotificationCompat
 import com.codemonkeylabs.fpslibrary.Calculation
 import com.codemonkeylabs.fpslibrary.FPSConfig
 import com.zacharee1.boredsigns.R

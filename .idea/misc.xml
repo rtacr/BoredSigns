@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/activity.xml" value="0.1828125" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/activity_image_picker.xml" value="0.1828125" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/activity_nav_bar_configure.xml" value="0.1828125" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/aod_item.xml" value="0.1828125" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/battery_view.xml" value="0.1828125" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/clock_view.xml" value="0.1828125" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/cpu_textview.xml" value="0.1828125" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/cpu_widget.xml" value="0.1828125" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/dev2_widget.xml" value="0.1828125" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/google_attr.xml" value="0.1828125" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/image_preference.xml" value="0.21145833333333333" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/navbar_widget.xml" value="0.1828125" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/wifi_view.xml" value="0.1828125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>
