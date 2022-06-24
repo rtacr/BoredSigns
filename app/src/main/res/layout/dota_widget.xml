@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dota_content"
+    android:layout_width="1040px"
+    android:layout_height="160px"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal"
+    android:padding="12px">
+
+    <ImageView
+        android:id="@+id/ivHero"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#9C27B0"
+        android:visibility="visible"
+        app:srcCompat="@android:drawable/sym_def_app_icon"
+        tools:srcCompat="?android:attr/fingerprintAuthDrawable" />
+
+    <TextView
+        android:id="@+id/tvHeroName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:text="Night Stalker"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="50px" />
+
+    <TextView
+        android:id="@+id/tvKDA"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:text="KDA: 2/5/13"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="50px" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="14sp" />
+</LinearLayout>

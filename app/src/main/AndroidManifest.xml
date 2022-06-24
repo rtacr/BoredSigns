@@ -226,6 +226,21 @@
                 android:value="cpu_widget_desc" />
         </receiver>
         <receiver
+            android:name=".widgets.OpenDotaWidget"
+            android:label="@string/dota_widget_title"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/dota_widget_info" />
+            <meta-data
+                android:name="com.lge.signboard.widget.description"
+                android:value="dota_widget_desc" />
+        </receiver>
+        <receiver
             android:name=".widgets.RingerVolumeWidget"
             android:label="@string/ringer_widget_title"
             android:exported="false">

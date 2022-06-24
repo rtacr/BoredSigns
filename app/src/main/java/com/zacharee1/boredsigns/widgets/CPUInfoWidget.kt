@@ -17,19 +17,19 @@ class CPUInfoWidget : AppWidgetProvider() {
         if (enabled) ContextCompat.startForegroundService(context, Intent(context, CPUInfoService::class.java))
 
         val views = RemoteViews(context.packageName, R.layout.cpu_widget)
-        views.removeAllViews(R.id.content)
+        views.removeAllViews(R.id.dota_content)
 
         val info = Utils.parseCpuInfo()
 
         if (info.isEmpty()) {
             val tv = RemoteViews(context.packageName, R.layout.cpu_textview)
             tv.setTextViewText(R.id.usage, context.resources.getText(R.string.unable_to_parse_cpu_info))
-            views.addView(R.id.content, tv)
+            views.addView(R.id.dota_content, tv)
         } else {
             for (s in info) {
                 val tv = RemoteViews(context.packageName, R.layout.cpu_textview)
                 tv.setTextViewText(R.id.usage, s)
-                views.addView(R.id.content, tv)
+                views.addView(R.id.dota_content, tv)
             }
         }
 

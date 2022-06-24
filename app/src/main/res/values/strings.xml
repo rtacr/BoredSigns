@@ -14,11 +14,13 @@
     <string name="cpu_widget_title">CPU Usage Info</string>
     <string name="ringer_widget_title">Ringer Volume Widget</string>
     <string name="media_widget_title">Media Volume Widget</string>
+    <string name="dota_widget_title">Dota Widget</string>
 
     <!--Widget Summaries-->
     <string name="dev_widget_1_desc">FPS, RAM, Charge Rate</string>
     <string name="dev_widget_2_desc">CPU Temp, GPU Temp, Battery Temp</string>
     <string name="cpu_widget_desc">CPU Usage in %, CPU core frequency in MHz</string>
+    <string name="dota_widget_desc">Your latest dota game</string>
 
     <!--Preference Category Titles-->
     <string name="battery">Battery</string>

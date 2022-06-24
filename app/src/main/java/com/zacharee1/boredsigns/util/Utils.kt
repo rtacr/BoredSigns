@@ -17,7 +17,17 @@ import android.view.View
 import android.widget.TextView
 import java.io.BufferedReader
 import java.io.InputStreamReader
+import java.util.*
+import kotlin.collections.ArrayList
 
+class DotaGame{
+    var hero : String = "";
+    var dateTime : Date = Date();
+    var k : Int = 0;
+    var d : Int = 0;
+    var a : Int = 0;
+    var gpm : Int =  0;
+}
 
 object Utils {
     fun checkCompatibility(context: Context): Boolean {
@@ -219,8 +229,22 @@ object Utils {
         return bmp
     }
 
+    fun parseDotaInfo(): DotaGame{
+        val game = DotaGame();
+
+        game.hero = "Ogre Magi"
+        game.k = 5;
+        game.d = 10;
+        game.a = 15;
+        game.gpm = 400;
+
+        return game;
+    }
+
     private var cpuLast = arrayListOf("0", "0", "0", "0", "0", "0")
     private var cpuLastSum = 0
+
+
 
     fun parseCpuInfo(): ArrayList<String> {
         val proc = Runtime.getRuntime().exec("head -1 /proc/stat")

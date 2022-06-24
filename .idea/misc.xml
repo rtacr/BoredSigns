@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/activity.xml" value="0.1828125" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/activity_aod.xml" value="0.3614583333333333" />
         <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/activity_image_picker.xml" value="0.1828125" />
         <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/activity_nav_bar_configure.xml" value="0.1828125" />
         <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/aod_item.xml" value="0.1828125" />
@@ -11,11 +12,13 @@
         <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/clock_view.xml" value="0.1828125" />
         <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/cpu_textview.xml" value="0.1828125" />
         <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/cpu_widget.xml" value="0.1828125" />
-        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/dev2_widget.xml" value="0.1828125" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/dev2_widget.xml" value="0.1" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/dota_widget.xml" value="0.33" />
         <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/google_attr.xml" value="0.1828125" />
         <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/image_preference.xml" value="0.21145833333333333" />
         <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/navbar_widget.xml" value="0.1828125" />
         <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/layout/wifi_view.xml" value="0.1828125" />
+        <entry key="..\:/Rndm/Coding/GitHub/BoredSigns/app/src/main/res/xml/dota_widget_info.xml" value="0.1" />
       </map>
     </option>
   </component>
